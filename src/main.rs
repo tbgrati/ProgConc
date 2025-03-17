@@ -69,13 +69,3 @@ fn calculate_pi(n: u64) -> String {
 
     format!("{}", 4.0 * sum)
 }
-
-// 1. ¿Que sucede con dos requests simultaneas que tardan en procesarse?
-// Primero se procesa una y despues la siguente. Si la primera tarda mucho en ejecutarse
-// la segunda request se vera demorada
-// 2. ¿Por que se observa este comportamiento?
-// Porque se manejan las requests de manera secuencial (en for stream in listener.incoming())
-// que ejecuta una request a la vez
-// 3. ¿Como solucionar usando solo librerıas estandar de Rust?
-// Se puede solucionar mediante el manejo de multiples hilos (std::thread) para manejar
-// cada conexion en su propio hilo de ejecucion,
