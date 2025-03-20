@@ -6,7 +6,7 @@ use std::time::Instant;
 fn main() {
     let listener = TcpListener::bind("127.0.0.1:3030").expect("No se pudo iniciar el servidor");
 
-    println!("Servidor HTTP corriendo en http://127.0.0.1:3030");
+    println!("Servidor HTTP corriendo en 127.0.0.1:3030");
 
     for stream in listener.incoming() {
         if let Ok(stream) = stream {
@@ -55,7 +55,6 @@ fn parse_request(request: &str) -> Option<u64> {
             }
         }
     }
-
     None
 }
 
