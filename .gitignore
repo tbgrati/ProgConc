@@ -1,1 +1,12 @@
-/target
+# === Rust build artifacts ===
+/target/
+/Cargo.lock
+
+# === Rust test output ===
+/**/*.rs.bk
+/*.rs.bk
+
+debug/
+release/
+.idea/          # RustRover/IntelliJ project files
+.DS_Store       # macOS system files
